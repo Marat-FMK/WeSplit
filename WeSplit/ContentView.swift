@@ -32,7 +32,7 @@ struct ContentView: View {
         NavigationStack{
             Form {
                 Section {
-                    TextField("Amound", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    TextField("Amound", value: $checkAmount, format: .currency(code: Locale.current.currency?.identifier ?? "RUB"))
                         .keyboardType(.decimalPad)
                         .focused($amountIsFocused)
                     
@@ -51,7 +51,7 @@ struct ContentView: View {
                     .pickerStyle(.navigationLink)
                 }
                 Section("Amount per person") {
-                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                    Text(totalPerPerson, format: .currency(code: Locale.current.currency?.identifier ?? "RUB"))
                 }
                 Section("Total price + tip") {
                     HStack {
